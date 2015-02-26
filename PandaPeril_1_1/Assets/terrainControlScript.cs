@@ -28,7 +28,7 @@ public class terrainControlScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (!Input.GetMouseButton (0)) {
 			stopFlag = false;
 			panda.transform.Rotate (0, 0, curRotation * Time.deltaTime);
