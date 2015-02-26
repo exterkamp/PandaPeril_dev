@@ -19,7 +19,7 @@ public class garbageCollect : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collidee)
 	{
-		Destroy(collidee.gameObject);
+		Destroy(collidee.gameObject.transform.parent.gameObject);
 		//Rigidbody newTerrain;
 		Transform farthestRight = null;
 		foreach (Transform child in terrainControllerRef.transform) {
@@ -32,7 +32,7 @@ public class garbageCollect : MonoBehaviour {
 			}
 		}
 
-		Vector3 newPos = new Vector3 (farthestRight.position.x + 50,-4.5f,0);
+		Vector3 newPos = new Vector3 (farthestRight.position.x + 50,0,0);
 
 
 		//Rigidbody newTerrain; 
